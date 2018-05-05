@@ -1,12 +1,15 @@
 <html ng-app="app" >
 	<head>
-		<title ng-bind="state.Stats.Title">Cloud Torrent</title>
+		<title ng-bind="state.Stats.Title">Kaoru Seedbox - Torrent Seedbox</title>
     	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="css/Lato/Lato.css">
 		<link rel="stylesheet" type="text/css" href="css/semantic.min.css">
 		<link rel="stylesheet" type="text/css" href="css/app.css">
 		<link rel="icon" href="cloud-favicon.png" type="image/x-icon" />
 		<style type="text/css">[ng-cloak]{display: none;}</style>
+		<style> body{background-image: url('https://idnation.net/wp-content/uploads/2018/01/5555555.jpg') !important;
+background-size: cover !important;}\
+	</style>
 	</head>
 	<body class="app"><div ng-cloak class="cage">
 		<div ng-if="!connected" class="connect-warning ui inverted vertical masthead center aligned segment">
@@ -22,13 +25,7 @@
 		<!-- TITLE ===================== -->
 		<div class="title">
 			<h2>
-				<a href="https://github.com/jpillora/cloud-torrent"
-					target="_blank"
-					ng-init="logoHover = false"
-					ng-mouseover="logoHover = true"
-					ng-mouseleave="logoHover = false">
-					<i class="blue icon" ng-class="{cloud:!logoHover, github: logoHover}"></i>  {{ state.Stats.Title }}
-				</a>
+					<i class="blue icon" ></i>  Kaoru Seedbox
 			</h2>
 			<div class="status">
 				<i ng-show="request.count > 0"
@@ -55,11 +52,11 @@
 		<section class="downloads" ng-controller="DownloadsController" ng-include src="'template/downloads.html'"></section>
 
 		<footer>
-			<span>github.com/<a href="https://github.com/jpillora" target="_blank">jpillora</a>/<a href="https://github.com/jpillora/cloud-torrent" target="_blank">cloud-torrent</a> version {{ state.Stats.Version }}	-	</span>
+			<span> Kaoru Seedbox [ Server Information : 48cpu's , 192GB RAM ]</span>
+			
 			<span ng-if="numKeys(state.Users) > 1">{{ numKeys(state.Users) }} users connected	-	</span>
-			<span><a href="https://golang.org" target="_blank">Go</a> {{ state.Stats.Runtime }}</span>
 		</footer>
-
+<script id="cid0020000186513428981" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 250px;height: 350px;">{"handle":"kaoruseedbox","arch":"js","styles":{"a":"000066","b":100,"c":"FFFFFF","d":"FFFFFF","k":"000066","l":"000066","m":"000066","n":"FFFFFF","p":"10","q":"000066","r":100,"usricon":0.83,"surl":0,"cnrs":"0.35","fwtickm":1}}</script>
 		<script src="js/vendor/query-string.js"></script>
 		<script src="js/vendor/angular.min.js"></script>
 		<script src="js/vendor/moment.min.js"></script>
